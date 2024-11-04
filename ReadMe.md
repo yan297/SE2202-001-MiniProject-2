@@ -150,42 +150,46 @@ recordInterviewScore(candidate2, 6);
 ```
 
 
+### Evaluation Criteria
+Each requirement has a specific point value, as described below. The total score for the assignment is 6 points, with detailed rubrics to guide how these points are distributed for each requirement.
 
-### Submission Requirements
-- **Code Files**: Push all source code files, including any additional utility files created to your GitHub repository.
-- **Output Screenshot**: Submit the screenshot of your output to OWL with the link to your GitHub repository.
+### Detailed Rubric for Each Requirement
+1. **Candidate Class and Interview Status Tracking (1 Point)**
+   - **Full Marks (1 Point)**: Proper implementation of the `Candidate` class with attributes (`fullName`, `email`, `status`). The status management should include appropriate methods (`updateStatus()`) that correctly update and track candidate statuses.
+   - **Partial Marks (0.5 Point)**: Implementation is mostly correct but with minor issues, such as missing a method or improper encapsulation of fields.
+   - **No Marks (0 Point)**: Major issues or incomplete implementation of the `Candidate` class. Missing key functionality, such as status updates.
 
+2. **Observer Pattern for Status Updates (1 Point)**
+   - **Full Marks (1 Point)**: Correct implementation of the Observer pattern. Observers are properly notified when the candidate's status changes, and the output correctly reflects the notifications.
+   - **Partial Marks (0.5 Point)**: Observer pattern is implemented but with minor issues, such as incorrect observer notifications or incomplete observer attachment.
+   - **No Marks (0 Point)**: Observer pattern is missing or incorrectly implemented, such as failing to notify observers properly.
 
-### Detailed Rubric
-1. **Correct implementation of OOP concepts, including inheritance and encapsulation (20%)**
-   - **Full Marks (20%)**: Classes are well-defined with appropriate use of inheritance and encapsulation. Candidate, Interview, and their derived classes (HRInterview, TechnicalInterview) follow best OOP practices.
-   - **Partial Marks (10-15%)**: Minor issues with inheritance or encapsulation, such as not properly using `extends` for inheritance or failing to encapsulate data effectively (e.g., public access to fields that should be private).
-   - **Low Marks (0-9%)**: Major problems with class structure, missing inheritance where necessary, or failing to use encapsulation entirely (e.g., all fields are public).
+3. **Candidate Database (1 Point)**
+   - **Full Marks (1 Point)**: A collection is used appropriately to manage candidates, with methods to add, remove, find, and filter candidates. The implementation correctly handles all specified operations.
+   - **Partial Marks (0.5 Point)**: Most functionality is implemented correctly, but minor issues exist, such as incorrect filtering or missing validation.
+   - **No Marks (0 Point)**: Collection management is either missing or incorrect. Key methods such as adding or finding candidates are not implemented properly.
 
-2. **Proper use of the Observer Pattern to manage candidate status notifications (20%)**
-   - **Full Marks (20%)**: Observer pattern is implemented correctly, with observers being notified upon candidate status changes. Observers should be properly attached and notified in real-time.
-   - **Partial Marks (10-15%)**: Observer pattern is implemented but contains minor issues, such as missing notifications in some scenarios or incorrectly adding/removing observers.
-   - **Low Marks (0-9%)**: Observer pattern is either missing or incorrectly implemented, such as failing to notify observers or attaching observers inappropriately.
+4. **Parallel Interview Scheduling (1 Point)**
+   - **Full Marks (1 Point)**: Interviews are scheduled concurrently using `Promise.all()` or similar asynchronous mechanisms. No conflicts or major issues occur during scheduling.
+   - **Partial Marks (0.5 Point)**: Concurrent scheduling is implemented, but there are minor issues, such as incorrect async/await usage or some minor scheduling conflicts.
+   - **No Marks (0 Point)**: Concurrent scheduling is incorrect or missing. Interviews are scheduled sequentially without using asynchronous techniques, or there are major errors.
 
-3. **Efficient handling of concurrent interview scheduling (20%)**
-   - **Full Marks (20%)**: Interviews are scheduled concurrently using `Promise.all()` or equivalent, with clear handling of all asynchronous operations. No conflicts or errors occur during the scheduling.
-   - **Partial Marks (10-15%)**: Concurrent scheduling is implemented, but minor errors exist, such as improperly handled async/await, or some scheduling conflicts are not resolved.
-   - **Low Marks (0-9%)**: Concurrent scheduling is incorrect or missing. Interviews are scheduled sequentially without using asynchronous techniques, or major errors exist causing incorrect scheduling.
+5. **Interview Scoring System (1 Point)**
+   - **Full Marks (1 Point)**: The scoring system is implemented correctly, with candidate statuses (`Passed` or `Failed`) updated based on their scores. Thresholds are handled accurately.
+   - **Partial Marks (0.5 Point)**: Scoring system is mostly implemented but with minor issues, such as incorrect threshold handling or missing score validation.
+   - **No Marks (0 Point)**: Scoring system is missing or majorly flawed, such as failing to update the candidate status based on scores.
 
-4. **Accurate implementation of interview scoring and status updates (20%)**
-   - **Full Marks (20%)**: The scoring system is properly implemented, with scores updating candidate statuses accurately (e.g., `Passed`, `Failed`). Scoring thresholds are used correctly.
-   - **Partial Marks (10-15%)**: Scoring is implemented but with minor issues, such as improper threshold handling or failing to update candidate status in some scenarios.
-   - **Low Marks (0-9%)**: Scoring system is incomplete or incorrect, with missing logic for updating statuses or incorrect handling of scores.
+6. **Interview Reminders (1 Point)**
+   - **Full Marks (1 Point)**: Reminder system is implemented correctly, with reminders being sent the day before an interview. The reminders include all necessary details.
+   - **Partial Marks (0.5 Point)**: Reminders are implemented but contain minor issues, such as incorrect timing or incomplete details.
+   - **No Marks (0 Point)**: Reminders are missing or incorrectly implemented, such as failing to include critical details or sending them at the wrong time.
 
-5. **Proper handling of reminders for both interviewers and candidates (10%)**
-   - **Full Marks (10%)**: Reminders are correctly implemented, with reminders being sent to both interviewers and candidates as required. The reminders are formatted properly and are sent at the appropriate times.
-   - **Partial Marks (5-7%)**: Reminders are implemented but with some issues, such as incorrect timing or missing details in the reminder message.
-   - **Low Marks (0-4%)**: Reminders are either missing or incorrectly implemented, such as sending reminders at the wrong times or failing to include essential details.
+### Additional Evaluation Criteria (Code Quality)
+1. **Code Quality, Readability, and Documentation (Up to -1 Point Penalty)**
+   - **Full Marks (No Deduction)**: Code is well-structured, readable, and follows standard conventions. Adequate commenting and documentation are provided.
+   - **Minor Issues (-0.5 Point)**: Code is readable, but there are minor issues, such as inconsistent formatting or missing comments in parts of the code.
+   - **Major Issues (-1 Point)**: Code is poorly structured, lacks documentation, and is difficult to follow. Code conventions are not adhered to, making the implementation confusing.
 
-6. **Code quality, readability, and documentation (10%)**
-   - **Full Marks (10%)**: Code is well-structured, easy to read, and follows standard conventions. There is adequate commenting and documentation, explaining each class and function clearly.
-   - **Partial Marks (5-7%)**: Code quality is acceptable but contains minor issues, such as inconsistent formatting, missing comments, or lack of clarity in some parts of the implementation.
-   - **Low Marks (0-4%)**: Code is poorly structured, lacks comments or documentation, and is difficult to follow. Code conventions are not adhered to, making the implementation confusing.
 
 
 Good luck, and happy coding!
